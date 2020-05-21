@@ -1,5 +1,68 @@
+<!DOCTYPE html>
+<html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> TeamWork IDE </title>
     <link rel="stylesheet" href="./index.css">
+    <script src="lib.js"></script>
 </head>
-Hello World!
+
+<body>
+    <div class="topbar">
+        <div style="float:right;">
+            <a class="close" id="closeApp" href="javascript:require('electron').remote.getCurrentWindow().close();">X</a>
+        </div>
+    </div>
+    <center>
+        <div class=container id="container">
+            <div class="login_container">
+                <form id="login">
+                    <div class="box">
+                        <label class="login_label">Email or Username </label>
+                        <input type="email" id="email" placeholder="mail@mail.gr/username">
+                    </div>
+                    <div class="box">
+                        <label class="login_label">Password </label>
+                        <input type="password" id="password"> </input>
+                    </div>
+                    <br>
+                    <input type=submit value="Log in" onclick="findUser()" id="loginButton" disabled></input>
+                    <input type=button value="Register Acount" onclick="displayRegisterBox()" id="registerButton"
+                        disabled></input>
+                </form>
+                <div id="auth" class="box">Connecting to server...<br>please wait</div>
+            </div>
+
+            <div class="right">
+                <div class="login_container" id="register-box">
+                    <div style="float:right;">
+                        <a class="close" id="regClose" href=# onclick="registerX()">X</a>
+                    </div>
+                    <h2>Sign up</h2>
+                    <form id="register">
+                        <div class="register_input"><input type="text" id="regName" placeholder="name" /></div>
+                        <div class="register_input"><input type="text" id="regSurname" placeholder="surname" /></div>
+                        <div class="register_input"><input type="text" id="regUsername" placeholder="Username" /></div>
+                        <div class="register_input"><input type="text" id="regEmail" placeholder="E-mail" /></div>
+                        <div class="register_input"><input type="password" id="regPassword1" placeholder="Password" /></div>
+                        <div class="register_input"><input type="password" id="regPassword2" placeholder="Retype password" /></div>
+                        <br>
+                        <div class="register_input"><input type="button" id="regSubmit" onclick="registerForm()" value="Sign me up" /></div>
+                    </form>
+                    <div id="regFail" class="box" style="display: none;">Invalid credentials</div>
+                </div>
+
+                <div id="right">
+                    <h4>Welcome to Teamwork IDE</h4>
+                    <br>
+                    <h5>To login please have MongoDB set up on localhost. <br> To Register, Now you can. <br> To close
+                        the
+                        window press Esc </h5>
+                </div>
+            </div>
+    </center>
+    <script src="dbconnect.js"></script>
+</body>
+
+</html>

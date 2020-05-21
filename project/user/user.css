@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+html {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    margin: 0px;
+}
+
+* {box-sizing: border-box;}
+
+.grid_container{
+    display:grid;
+    grid-template-areas: 'sidebar left top right'
+                         'sidebar left bottom right';
+    height: 100vh;
+}
+
+.text_editor{
+    display:flex;
+    grid-area:top;
+}
+
+.file_tree{
+    grid-area: left;
+}
+
+.console{
+    display:none;
+    grid-area: bottom;
+}
+
+.chat{
+    grid-area: right;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+iframe{
+    border-width: 0px;
+    width: 100%;
+    height: 100%;
+}

@@ -16,4 +16,19 @@ class team {
     }
 
 }
-  
+
+class browserWindow{
+    static width;
+    static height;
+    //maybe some electron variables
+
+    maximize(){
+      this.width = maxWidth;
+      this.height = maxHeight;
+    }
+
+    minimize(){
+      this.width = 0;
+      this.height = 0;
+    }
+}

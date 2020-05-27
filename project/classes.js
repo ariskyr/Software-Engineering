@@ -32,3 +32,32 @@ class browserWindow{
       this.height = 0;
     }
 }
+
+class loginWindow extends browserWindow{
+  
+  static db;
+  static client;
+  static users;
+  static type;
+
+  userLoggedIn(){
+    //method to check if user is logged in
+  }
+
+  mongoConnect(){
+    //method to connect to mongo
+  }
+
+  findUser(){
+
+  }
+
+  createWindow(type, user){
+
+  }
+
+  registerForm(){
+    
+  }
+}
+

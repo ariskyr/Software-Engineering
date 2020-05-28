@@ -180,3 +180,26 @@ class File{
 
   }
 }
+
+
+class CallWindow{ //extends BrowserWindow
+  constructor(callId, duration, startedAt, callStartedBy){
+    this.callId = callId;
+    this.duration = duration;
+    this.startedAt = startedAt;
+    this.callStartedBy = callStartedBy;
+  }
+
+  muteSelf(member){
+    member.voiceVolume = 0; //logika kapws etsi tha ginetai
+  }
+
+  unmuteSelf(member){
+    //fetch previous voiceVolume
+    //member.voiceVolume = previous voiceVolume
+  }
+}
+
+class VideoCallInfo{ //isws na mhn prepei na einai klasi,
+  //den to exoume sto domain, einai sto robustness UC4
+}

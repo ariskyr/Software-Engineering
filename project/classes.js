@@ -1,4 +1,4 @@
-class team {
+class Team {
   constructor(name) {
     this.teamName = name;
   }
@@ -17,7 +17,34 @@ class team {
 
 }
 
-class browserWindow {
+class Member{
+  constructor(id, name, username, password){
+    this.id = id;
+    this.name = name;
+    this.username = username;
+    this.password = password;
+    this.isAdmin = false;
+  }
+
+  static status;
+
+  isAdminOnline(){
+
+    if(this.isAdmin){
+      return status;
+    
+    }else{
+      //error code
+    }
+  }
+
+  isOnline(){
+    return status;
+  }
+
+}
+
+class BrowserWindow {
   static width;
   static height;
   //maybe some electron variables
@@ -141,5 +168,15 @@ class File{
     catch(e){
       return Error("Could not rename the file")
     }
+  }
+
+  uploadFile(){
+    if(fileTooLarge){
+      //error
+
+    }else{
+      //upload to videocall
+    }
+
   }
 }

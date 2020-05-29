@@ -1,3 +1,6 @@
+// use "#"" for private
+// use "static" for public
+
 class Team {
   constructor(name) {
     this.teamName = name;
@@ -16,6 +19,21 @@ class Team {
   }
 
 }
+
+class TeamList{
+  
+  static teamMembers(Team) {
+    team.forEach(Member => { //den einai se array omws
+      return Member;
+    });
+  }
+
+  static makeAdmin(Member){
+    member.isAdmin = true;
+  }
+}
+
+//team.TeamList.push(teamObject); because of domain model
 
 class Member{
   constructor(id, name, username, password){

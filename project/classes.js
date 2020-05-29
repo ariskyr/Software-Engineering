@@ -5,29 +5,22 @@ class Team {
   constructor(name) {
     this.teamName = name;
   }
-
-  addMember(member) {
-    //adding member code
-
-    return;
+  static addMember(member) {
+    team.push(member);
+    return team; 
   }
-
-  removeMember(member) {
-    //removing member code
-
-    return;
+  static removeMember(member) {
+    team.remove(member);
+    return team; 
   }
-
 }
 
 class TeamList{
-  
   static teamMembers(Team) {
     team.forEach(Member => { //den einai se array omws
       return Member;
     });
   }
-
   static makeAdmin(Member){
     member.isAdmin = true;
   }
@@ -43,35 +36,27 @@ class Member{
     this.password = password;
     this.isAdmin = false;
   }
-
   static status;
-
   isAdminOnline(){
-
     if(this.isAdmin){
-      return status;
-    
-    }else{
+      return status; 
+    } else{
       //error code
     }
   }
-
   isOnline(){
     return status;
   }
-
 }
 
 class BrowserWindow {
   static width;
   static height;
   //maybe some electron variables
-
   maximize() {
     this.width = maxWidth;
     this.height = maxHeight;
   }
-
   minimize() {
     this.width = 0;
     this.height = 0;
@@ -120,7 +105,7 @@ class projectStatus {
   }
 }
 
-class gitRepository extends Folder {
+class gitRepository{
   constructor(name, path, description, owner, dateCreated, commits) {
     this.name = name;
     this.path = path;
@@ -147,7 +132,7 @@ class gitRepository extends Folder {
   }
 }
 
-class Folder extends File{
+class Folder extends gitRepository{
   //constructor takes 0 arguments. lastEdited is today. No files,obviously
   constructor(){
     this.lastEdited = new Date();
@@ -170,7 +155,7 @@ class Folder extends File{
   }
 }
 
-class File{
+class File extends Folder{
   //do not forget to add path to attributes
   constructor(extension, path){
     this.extension = extension;
@@ -187,18 +172,14 @@ class File{
       return Error("Could not rename the file")
     }
   }
-
   uploadFile(){
     if(fileTooLarge){
       //error
-
-    }else{
+    } else{
       //upload to videocall
     }
-
   }
 }
-
 
 class CallWindow{ //extends BrowserWindow
   constructor(callId, duration, startedAt, callStartedBy){
@@ -207,11 +188,9 @@ class CallWindow{ //extends BrowserWindow
     this.startedAt = startedAt;
     this.callStartedBy = callStartedBy;
   }
-
   muteSelf(member){
     member.voiceVolume = 0; //logika kapws etsi tha ginetai
   }
-
   unmuteSelf(member){
     //fetch previous voiceVolume
     //member.voiceVolume = previous voiceVolume

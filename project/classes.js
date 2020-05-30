@@ -8,11 +8,11 @@ class Team {
   }
   static addMember(member) {
     team.push(member);
-    return team; 
+    return team;
   }
   static removeMember(member) {
     team.remove(member);
-    return team; 
+    return team;
   }
 }
 module.exports = Team;
@@ -209,6 +209,13 @@ class CallWindow { //extends BrowserWindow
     //fetch previous voiceVolume
     //member.voiceVolume = previous voiceVolume
   }
+}
+
+class UserWindow extends BrowserWindow {
+  constructor(whoIsMe){
+    this.whoIsMe = whoIsMe;
+  }
+  //method teamExists(): bool
 }
 
 class VideoCallInfo { //isws na mhn prepei na einai klasi,

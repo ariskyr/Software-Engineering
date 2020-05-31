@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5ea2a53fd4a5fbebf0a2773f"},"email":"akis@teamworkide.gr","password":"testPassword","isAdmin":true,"team":"Mpampades","username":"Akis"}
+{"_id":{"$oid":"5ea2b2efd4a5fbebf0a27740"},"email":"test@teamworkide.gr","password":"test","isAdmin":false,"team":"Mpampades","username":"TestUser"}

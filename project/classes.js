@@ -211,6 +211,29 @@ class CallWindow { //extends BrowserWindow
   }
 }
 
+class CallMembers extends CallWindow {
+  constructor(member, maxMembers) {
+    this.member = member;
+    this.maxMembers = maxMembers;
+  }
+  add(member) {
+    for(i=0; i<this.maxMembers; i++){ //tsekare posa atoma einai sto call
+      if(callMemberList[i] == 0) {  // an h lista exei keno prosthete ton
+        callMemberList[i] = member;
+      }
+    }
+  }
+  remove(member) {
+    while(callMemberList != 0) {
+      if(callMemberList[i] == member) { //find the member
+        callMemberList[i] = 0; //remove him from call
+      }
+      i++;
+    }
+  }
+}
+
+
 class UserWindow extends BrowserWindow {
   constructor(whoIsMe){
     this.whoIsMe = whoIsMe;
@@ -239,4 +262,24 @@ class Logs {
   clear() {
     //this = null;
   }
+}
+
+class Diagram {
+  constructor(title, whoCreated, date, shape, edge) { //get shape, edge and diagram information
+    this.text = text;
+    this.whoCreated = whoCreated;
+    this.date = date;
+    this.shape = shape;
+    this.edge = edge;
+  }
+
+  diagramCanvas(shape, edge){ //2 types of objects for shapes and lines
+    width.initialise();
+    height.initialise();
+
+    canvas.append(shape); // place object on the canvas
+    shape.append(edge); // append line *(arrow) on object
+  }
+
+  returnFile(file, name); //return the file with the name given by the person who created diagram
 }

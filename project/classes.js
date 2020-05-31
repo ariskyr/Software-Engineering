@@ -283,3 +283,9 @@ class Diagram {
 
   returnFile(file, name); //return the file with the name given by the person who created diagram
 }
+
+class TextEditor {
+  constructor() {
+    
+  }
+}

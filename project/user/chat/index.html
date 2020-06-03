@@ -1,2 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./chat.css">
+</head>
+
 <body style=background-color:red>
+    <div class="members-count">Number of online members. Ex: there are 4 online members</div>
+    <div class="members-list">List of online members. Ex: akis_sal, thanos_kar, jim_bouzi, aris_k</div>
+    <div class="messages" id="messageLog">Message log</div>
+    <form class="message-form"> 
+        <input class="message-form__input" id="messageBox" placeholder="Type a message.." type="text"/>
+        <input class="message-form__button" value="Send" type="button" onclick="sendText()"/>
+    </form>
+    <script src="./chat.js"></script>
 </body>

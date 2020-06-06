@@ -5,3 +5,23 @@ function sendText(){
 
     // pros to paron emfanizetai mono ena minima, ara den einai akrivws logs
 }
+
+function helloWorld(){
+    //for debugging
+    console.log("hello world!");
+}
+
+function makePresentation(){
+    if (!member.isAdminOnline){
+        return false;
+    } else if(!adminAcceptsCall){ //den yparxei
+        return false;
+    } else{
+        startCall(); //den yparxei
+    }
+}
+
+
+function presentFiles(){
+    
+}

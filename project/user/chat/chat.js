@@ -1,8 +1,6 @@
-function sendText(){
-    
+function sendText(){    
     document.getElementById("messageLog").innerHTML = document.getElementById("messageBox").value;
     document.getElementById("messageBox").value = "This is cleared"; 
-
     // pros to paron emfanizetai mono ena minima, ara den einai akrivws logs
 }
 
@@ -21,7 +19,12 @@ function makePresentation(){
     }
 }
 
-
 function presentFiles(){
-    
+    if(document.getElementById("uploadFile").files.length == 0){σ
+        console.log("no files selected");
+        return false;
+    } else{
+        fileToUpload = new File(extention, path);
+        fileToUpload.uploadFile();
+    }
 }

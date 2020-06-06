@@ -115,7 +115,7 @@ class projectStatus {
   }
 }
 
-class File {
+class File extends Folder {
   //do not forget to add path to attributes
   constructor(extension, path) {
     this.extension = extension;
@@ -143,7 +143,7 @@ class File {
   }
 }
 
-class Folder extends File {
+class Folder extends GitRepository {
   //constructor takes 0 arguments. lastEdited is today. No files,obviously
   constructor(filelist) {
     this.lastEdited = new Date();
@@ -163,7 +163,7 @@ class Folder extends File {
   }
 }
 
-class gitRepository extends Folder {
+class GitRepository {
   constructor(name, path, description, owner, dateCreated, commits) {
     this.name = name;
     this.path = path;
@@ -248,8 +248,8 @@ class VideoCallInfo { //isws na mhn prepei na einai klasi,
 class Message {
   constuctor(text, date, sender) {
     this.text = text;
-    this.sender = sender
-    this.dateSent = date
+    this.dateSent = date;
+    this.sender = sender;
   }
   //TODO add functions
 }

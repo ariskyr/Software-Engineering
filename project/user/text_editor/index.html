@@ -1,7 +1,20 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./textEditor.css">
+  </head>
+
 <body style=background-color:magenta>
 
-    <div class="editor" contenteditable="true"> 
-    </div>
+    <h1>This is a text editor!</h1>
+    <button type="button" class="button" onclick="makeBold()">Bold</button>
+    <button type="button" class="button" onclick="makeItalics()">Italics</button>
+    <button type="button" class="button" onclick="makeUnderline()">Underline</button>
+    <button type="button" class="button" onclick="makeLineThrough()">Line-Through</button>
+
+    <div id="content" contenteditable="true" class="textEditorBox"></div>
+
+    <script src="./textEditor.js"></script>
 
 
 </body>

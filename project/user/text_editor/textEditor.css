@@ -1,0 +1,49 @@
+html {
+    font-family: "Helevetica", sans-serif;
+}
+
+body {
+    color: #333;
+    font-weight: 100;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.textEditorBox {
+    width: 80%;
+    border: 5px solid rgb(236, 47, 0);
+    padding: 15px;
+    margin: 10px;
+}
+
+#content {
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.button {
+    background-color: rgb(216, 112, 27);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+}

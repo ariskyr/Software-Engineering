@@ -20,7 +20,7 @@ function makePresentation(){
 }
 
 function presentFiles(){
-    if(document.getElementById("uploadFile").files.length == 0){σ
+    if(document.getElementById("uploadFile").files.length == 0){
         console.log("no files selected");
         return false;
     } else{
